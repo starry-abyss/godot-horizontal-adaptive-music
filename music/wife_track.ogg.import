@@ -7,10 +7,7 @@ path="res://.import/wife_track.ogg-5025bb40bbad43c621fc6fd81159153c.oggstr"
 [deps]
 
 source_file="res://music/wife_track.ogg"
-source_md5="68b0aef69a1848256b8d9262923b60ae"
-
 dest_files=[ "res://.import/wife_track.ogg-5025bb40bbad43c621fc6fd81159153c.oggstr" ]
-dest_md5="08ceb0352901c0b4431433f32c514ae7"
 
 [params]
 

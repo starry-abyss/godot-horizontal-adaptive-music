@@ -8,7 +8,7 @@
 [ext_resource path="res://music/wife_track.ogg" type="AudioStream" id=6]
 [ext_resource path="res://music/horror_track_B.ogg" type="AudioStream" id=7]
 
-[node name="music" type="CanvasLayer"]
+[node name="music" type="CanvasLayer" index="0"]
 
 layer = 100
 offset = Vector2( 0, 0 )
@@ -17,7 +17,7 @@ scale = Vector2( 1, 1 )
 transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 script = ExtResource( 1 )
 _sections_unfolded = [ "Pause", "Z Index" ]
-showDebug = false
+showDebug = true
 currentMusic = NodePath("music A")
 
 [node name="trackInfo" type="Label" parent="." index="0"]
@@ -70,9 +70,10 @@ _sections_unfolded = [ "Rect" ]
 
 stream = ExtResource( 2 )
 volume_db = 0.0
+pitch_scale = 1.0
 autoplay = false
 mix_target = 0
-bus = "Music"
+bus = "Master"
 script = ExtResource( 3 )
 quantizationInterval = 10
 BPM = 90.0
@@ -82,9 +83,10 @@ timeSignature = 2
 
 stream = ExtResource( 4 )
 volume_db = 0.0
+pitch_scale = 1.0
 autoplay = false
 mix_target = 0
-bus = "Music"
+bus = "Master"
 
 [node name="music B" type="Node" parent="music A/attack" index="0"]
 
@@ -92,9 +94,10 @@ bus = "Music"
 
 stream = ExtResource( 5 )
 volume_db = 0.0
+pitch_scale = 1.0
 autoplay = false
 mix_target = 0
-bus = "Music"
+bus = "Master"
 
 [node name="wife track" type="Node" parent="music A/wife" index="0"]
 
@@ -102,9 +105,10 @@ bus = "Music"
 
 stream = ExtResource( 6 )
 volume_db = 0.0
+pitch_scale = 1.0
 autoplay = false
 mix_target = 0
-bus = "Music"
+bus = "Master"
 script = ExtResource( 3 )
 quantizationInterval = 10
 BPM = 90.0
@@ -114,9 +118,10 @@ timeSignature = 2
 
 stream = ExtResource( 4 )
 volume_db = 0.0
+pitch_scale = 1.0
 autoplay = false
 mix_target = 0
-bus = "Music"
+bus = "Master"
 
 [node name="music B" type="Node" parent="wife track/attack" index="0"]
 
@@ -124,9 +129,10 @@ bus = "Music"
 
 stream = ExtResource( 7 )
 volume_db = 0.0
+pitch_scale = 1.0
 autoplay = false
 mix_target = 0
-bus = "Music"
+bus = "Master"
 script = ExtResource( 3 )
 quantizationInterval = 10
 BPM = 90.0
@@ -136,9 +142,10 @@ timeSignature = 2
 
 stream = ExtResource( 4 )
 volume_db = 0.0
+pitch_scale = 1.0
 autoplay = false
 mix_target = 0
-bus = "Music"
+bus = "Master"
 
 [node name="music A" type="Node" parent="music B/calm" index="0"]
 
@@ -146,9 +153,10 @@ bus = "Music"
 
 stream = ExtResource( 4 )
 volume_db = 0.0
+pitch_scale = 1.0
 autoplay = false
 mix_target = 0
-bus = "Music"
+bus = "Master"
 
 [node name="wife track" type="Node" parent="music B/wife" index="0"]
 

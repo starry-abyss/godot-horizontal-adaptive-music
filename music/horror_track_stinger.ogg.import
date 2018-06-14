@@ -7,10 +7,7 @@ path="res://.import/horror_track_stinger.ogg-15584b17f35d1542dfa2b5778b0f9ff7.og
 [deps]
 
 source_file="res://music/horror_track_stinger.ogg"
-source_md5="4aa3e93287b20a6f8a213f3d522ff8c5"
-
 dest_files=[ "res://.import/horror_track_stinger.ogg-15584b17f35d1542dfa2b5778b0f9ff7.oggstr" ]
-dest_md5="a477479ee2d0780bc7e7790dc131769b"
 
 [params]
 

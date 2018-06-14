@@ -7,10 +7,7 @@ path="res://.import/horror_track_B.ogg-ae3d8d6a195efebeea9fbe157cd42337.oggstr"
 [deps]
 
 source_file="res://music/horror_track_B.ogg"
-source_md5="02603239753cc2498e892daa27a2e8b0"
-
 dest_files=[ "res://.import/horror_track_B.ogg-ae3d8d6a195efebeea9fbe157cd42337.oggstr" ]
-dest_md5="c9cb43753ac6af1a2f5565dd5a90074c"
 
 [params]
 

@@ -1,5 +1,0 @@
-The music was composed by Bernard Machado for our Ludum Dare 41 game "Torn"
-
-You can contact Bernard here:
-    https://soundcloud.com/nudsmachado
-    nudsmachadotrabalho [at] gmail.com

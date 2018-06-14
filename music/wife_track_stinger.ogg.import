@@ -7,10 +7,7 @@ path="res://.import/wife_track_stinger.ogg-e950a0abf8f46bfcef2bfc6f24381a5c.oggs
 [deps]
 
 source_file="res://music/wife_track_stinger.ogg"
-source_md5="5380332f099d18e358b6487679a7a3db"
-
 dest_files=[ "res://.import/wife_track_stinger.ogg-e950a0abf8f46bfcef2bfc6f24381a5c.oggstr" ]
-dest_md5="6b231a1050b666f3fb61112be46ddec4"
 
 [params]
 

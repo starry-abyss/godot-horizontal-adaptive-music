@@ -11,7 +11,12 @@ config_version=3
 [application]
 
 config/name="godot-music"
+run/main_scene="res://test_scene.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+music="*res://music/music.tscn"
 
 [rendering]
 
