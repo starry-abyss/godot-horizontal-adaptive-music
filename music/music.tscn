@@ -1,0 +1,155 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://music/musicGroup.gd" type="Script" id=1]
+[ext_resource path="res://music/horror_track_A.ogg" type="AudioStream" id=2]
+[ext_resource path="res://music/gridSettings.gd" type="Script" id=3]
+[ext_resource path="res://music/horror_track_stinger.ogg" type="AudioStream" id=4]
+[ext_resource path="res://music/wife_track_stinger.ogg" type="AudioStream" id=5]
+[ext_resource path="res://music/wife_track.ogg" type="AudioStream" id=6]
+[ext_resource path="res://music/horror_track_B.ogg" type="AudioStream" id=7]
+
+[node name="music" type="CanvasLayer"]
+
+layer = 100
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+script = ExtResource( 1 )
+_sections_unfolded = [ "Pause", "Z Index" ]
+showDebug = false
+currentMusic = NodePath("music A")
+
+[node name="trackInfo" type="Label" parent="." index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 3.0
+margin_top = 4.0
+margin_right = 210.0
+margin_bottom = 18.0
+rect_scale = Vector2( 2, 2 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_colors/font_color = Color( 0.253935, 0.0846863, 0.289063, 1 )
+text = "In game here goes the track info"
+valign = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_colors" ]
+
+[node name="eventTester" type="GridContainer" parent="." index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 3.0
+margin_top = 50.0
+margin_right = 208.0
+margin_bottom = 91.0
+rect_scale = Vector2( 2, 2 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+columns = 3
+_sections_unfolded = [ "Rect" ]
+
+[node name="music A" type="AudioStreamPlayer" parent="." index="2"]
+
+stream = ExtResource( 2 )
+volume_db = 0.0
+autoplay = false
+mix_target = 0
+bus = "Music"
+script = ExtResource( 3 )
+quantizationInterval = 10
+BPM = 90.0
+timeSignature = 2
+
+[node name="attack" type="AudioStreamPlayer" parent="music A" index="0"]
+
+stream = ExtResource( 4 )
+volume_db = 0.0
+autoplay = false
+mix_target = 0
+bus = "Music"
+
+[node name="music B" type="Node" parent="music A/attack" index="0"]
+
+[node name="wife" type="AudioStreamPlayer" parent="music A" index="1"]
+
+stream = ExtResource( 5 )
+volume_db = 0.0
+autoplay = false
+mix_target = 0
+bus = "Music"
+
+[node name="wife track" type="Node" parent="music A/wife" index="0"]
+
+[node name="wife track" type="AudioStreamPlayer" parent="." index="3"]
+
+stream = ExtResource( 6 )
+volume_db = 0.0
+autoplay = false
+mix_target = 0
+bus = "Music"
+script = ExtResource( 3 )
+quantizationInterval = 10
+BPM = 90.0
+timeSignature = 2
+
+[node name="attack" type="AudioStreamPlayer" parent="wife track" index="0"]
+
+stream = ExtResource( 4 )
+volume_db = 0.0
+autoplay = false
+mix_target = 0
+bus = "Music"
+
+[node name="music B" type="Node" parent="wife track/attack" index="0"]
+
+[node name="music B" type="AudioStreamPlayer" parent="." index="4"]
+
+stream = ExtResource( 7 )
+volume_db = 0.0
+autoplay = false
+mix_target = 0
+bus = "Music"
+script = ExtResource( 3 )
+quantizationInterval = 10
+BPM = 90.0
+timeSignature = 2
+
+[node name="calm" type="AudioStreamPlayer" parent="music B" index="0"]
+
+stream = ExtResource( 4 )
+volume_db = 0.0
+autoplay = false
+mix_target = 0
+bus = "Music"
+
+[node name="music A" type="Node" parent="music B/calm" index="0"]
+
+[node name="wife" type="AudioStreamPlayer" parent="music B" index="1"]
+
+stream = ExtResource( 4 )
+volume_db = 0.0
+autoplay = false
+mix_target = 0
+bus = "Music"
+
+[node name="wife track" type="Node" parent="music B/wife" index="0"]
+
+
