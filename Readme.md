@@ -1,3 +1,5 @@
+**Please note** that as of Godot 4.3 there is now a built-in way to implement adaptive music. This tool was made for Godot 3.
+
 How to use
 ==========
 
